@@ -1,9 +1,14 @@
-public abstract class MotorTransport extends WheeledTransport {
+public abstract class MotorTransport extends Transport {
     public MotorTransport(String modelName, int wheelsCount) {
         super(modelName, wheelsCount);
     }
 
-    void checkEngine() {
+    public void service() {
+        super.service();
+        checkEngine();
+    }
+
+    public void checkEngine() {
         System.out.println("Проверяем двигатель");
     }
 }
